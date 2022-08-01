@@ -1,5 +1,6 @@
 package kr.hs.emirim.s2125.mirim_project_0801_listview1;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -23,7 +24,10 @@ public class MainActivity extends AppCompatActivity {
         listv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                
+                AlertDialog.Builder dlg= new AlertDialog.Builder(MainActivity.this);
+                dlg.setTitle("선택한 시리즈 및 영화");
+                dlg.setMessage(items[i]+" 선택하셨습니다. :)");
+                dlg.show();
             }
         });
     }
