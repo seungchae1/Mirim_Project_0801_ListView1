@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ListView listv = findViewById(R.id.listv);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_single_choice, items);
-        listv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice, items);
+        listv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         listv.setAdapter(adapter);
         listv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
